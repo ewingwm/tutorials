@@ -8,7 +8,7 @@ class Property(models.Model):
     _name = "estate.property"
     _description = "A Property for Real Estate"
 
-    name = fields.Char(required=True)
+    name = fields.Char("Title", required=True)
     description = fields.Text()
     postcode = fields.Char()
     date_avalibility = fields.Date("Date Avalible", copy = False, default=lambda self: date.today() + relativedelta(months=3))
