@@ -19,7 +19,7 @@ class Property(models.Model):
     facades = fields.Integer()
     garage = fields.Boolean()
     garden = fields.Boolean()
-    gardern_area = fields.Integer("Garden Area (sqm)")
+    garden_area = fields.Integer("Garden Area (sqm)")
     garden_orientation = fields.Selection(selection=[('north','North'),('south','South'),('east','East'),('west','West')])
     active = fields.Boolean(default=True)
     state = fields.Selection(selection=[('new','New'),('offer_recived','Offer Recieved'),('offer_accepted','Offer Accepted'),('sold','Sold'),('cancelled','Cancelled')], default = 'new', copy = False, required = True)
